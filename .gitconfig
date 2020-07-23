@@ -1,6 +1,10 @@
+[user]
+	email = ossian.rajala@gmail.com
+	name = Ossian Rajala
+
 [alias]
 	i = init
-	s = status
+	s = status -s 		# View the current working tree status using the short format.
 	p = push
 	a = add
 	c = commit -am
@@ -11,10 +15,31 @@
 	co = checkout
 	
 	pom = push origin master
-	
-[url "https://github.com/"]
-	insteadOf = gh:
 
-[user]
-	email = ossian.rajala@gmail.com
-	name = Ossian Rajala
+	# List aliases.
+	aliases = config --get-regexp alias
+
+	# Show the user email for the current repository.
+	whoami = config user.email
+
+
+# URL shorthands
+[url "git@github.com:"]
+
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+	insteadOf = "gist:"
