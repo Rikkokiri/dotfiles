@@ -54,6 +54,9 @@ brew install docker
 # aText
 brew cask install atext
 
+# Alfred
+brew cask install alfred
+
 # ---------------------------------------------
 # Web tools
 # ---------------------------------------------
