@@ -5,6 +5,6 @@
 dotfiles_dir="$HOME"/projects/dotfiles
 
 if [ "$PWD" = "$dotfiles_dir" ]; then
-  source $dotfiles_dir/bin/save_vscode_extensions.exclude.sh
+  source $dotfiles_dir/bin/save_vscode_extensions.exclude
   git add $dotfiles_dir/vscode/vscode_extensions
 fi
