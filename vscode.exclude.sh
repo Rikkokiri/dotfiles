@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # This script needs to be run as bash (not sh) due to use of <()
+# Inspired by Michael Anhari's ruby script for the same purpose https://michaelanhari.com/blog/saving-vscode-settings-in-your-dotfiles
 
 if [ -z 'which code' ] ; then
     echo "VS Code installation not found. Cannot install extensions."
