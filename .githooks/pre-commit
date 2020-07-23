@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Customised from https://github.com/anhari/dotfiles
+
+dotfiles_dir="$HOME"/projects/dotfiles
+
+if [ "$PWD" = "$dotfiles_dir" ]; then
+  source $dotfiles_dir/bin/save_vscode_extensions.exclude.sh
+  git add $dotfiles_dir/vscode/vscode_extensions
+fi

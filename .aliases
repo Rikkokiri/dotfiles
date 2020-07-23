@@ -27,6 +27,7 @@ alias g='git'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
+alias dotfiles="cd ~/projects/dotfiles"
 
 # ---------------------------------
 # NPM
