@@ -18,6 +18,9 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+# Core Utils
+brew install coreutils
+
 # ---------------------------------------------
 # Programming Languages and Frameworks
 # ---------------------------------------------
@@ -45,11 +48,10 @@ brew install docker
 # Useful tools
 # ---------------------------------------------
 
+brew install ssh-copy-id
+
 # Show directory structure with excellent formatting
 # brew install tree
-
-# tmux :'D 
-# brew install tmux
 
 # aText
 brew cask install atext
@@ -98,7 +100,6 @@ brew cask install flux
 
 # Spectacle for moving windows around (development discontinued though) 
 brew cask install spectacle
-
 
 # Remove outdated versions from the cellar
 brew cleanup
