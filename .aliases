@@ -12,7 +12,12 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ls='ls -A'
+
+alias la='ls -a'
+alias ll='ls -la'
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
 
 # ---------------------------------
 # Git specific aliases
