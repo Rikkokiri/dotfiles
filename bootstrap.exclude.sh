@@ -51,6 +51,31 @@ install_tools () {
 	fi
 }
 
+setup_vscode() {
+	if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
+		echo "$PROMPT Detected macOS"
+		echo "$PROMPT This utility will setup VSCode"
+		echo "$PROMPT Proceed? (y/n)"
+		read resp
+		if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+			echo "$PROMPT Setting up VSCode. This may take a while..."
+			
+			# Set up symlinks for settings, snippets, and keybindings
+			for file in $( ls -A $PWD/vscode | grep --include -r -E '\.json|snippets') ; do
+				ln -sv "$PWD/$file" "$HOME/Library/Application\ Support/Code/User/"
+			done
+			
+			# Install extensions
+			bash vscode.exclude.sh
+		else
+			echo "$PROMPT VSCode set up cancelled by user"
+		fi
+	else
+		echo "$PROMPT Skipping installations using Homebrew because MacOS was not detected..."
+	fi
+}
+
 init
 link
 install_tools
+setup_vscode
