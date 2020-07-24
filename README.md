@@ -4,6 +4,10 @@ My quite basic dotfile setup that will hopefully evolve.
 
 I keep my dotfiles under `~projects/` and that is what some of the scripts assume. I will update them later to use variables to make the set up more configurable.
 
+## To do
+
+- [ ] Adapt for zsh (currently specified for bash)
+
 ## Installation
 
 > Note:
