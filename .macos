@@ -15,7 +15,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Set highlight color to specific cyan (RGB: 11, 139, 142)
 # Divide each code by 255 => 0.0431372549 0.5450980392 0.5568627451
-# defaults write NSGlobalDomain AppleHighlightColor -string "0.0431372549 0.5450980392 0.5568627451"
+defaults write NSGlobalDomain AppleHighlightColor -string "0.0431372549 0.5450980392 0.5568627451"
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
