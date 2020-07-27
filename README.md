@@ -7,6 +7,7 @@ I keep my dotfiles under `~projects/` and that is what some of the scripts assum
 ## To do
 
 - [ ] Adapt for zsh (currently specified for bash)
+- [ ] In script: Create 'User' file under VS Code directory (if it doesn't exist)
 
 ## Installation
 
