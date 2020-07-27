@@ -281,14 +281,12 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in
-	"cfprefsd" \
+for app in "cfprefsd" \
 	"Dock" \
 	"Finder" \
 	"Google Chrome" \
 	"Photos" \
 	"Safari" \
-	# "Spectacle" \
 	"SystemUIServer" \
 	"Terminal"; do
 	killall "${app}" &> /dev/null
