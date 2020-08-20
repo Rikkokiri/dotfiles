@@ -201,7 +201,7 @@ mkdir -p $SCREENSHOT_FOLDER
 defaults write com.apple.screencapture type png
 
 # Set default screenshot location to a specific folder
-defaults write com.apply.screencapture location $SCREENSHOT_FOLDER
+defaults write com.apple.screencapture location $SCREENSHOT_FOLDER
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
