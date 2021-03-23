@@ -42,6 +42,11 @@ alias ni='npm install'
 alias nis='npm install --save'
 alias nisd='npm install --save-dev'
 
+# List all globally installed packages
+alias nglob='npm list -g --depth 0'
+# list -g: display a tree of every package found in the user’s folders
+# — depth 0 / — depth=0: avoid including every package’s dependencies in the tree view
+
 # ---------------------------------
 # Python virtual env aliases
 # ---------------------------------
