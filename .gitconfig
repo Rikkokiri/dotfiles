@@ -1,5 +1,5 @@
 [user]
-	email = ossian.rajala@gmail.com
+	email = ossian.rajala@gofore.com
 	name = Ossian Rajala
 
 [alias]
@@ -21,6 +21,8 @@
 
 	# Show the user email for the current repository.
 	whoami = config user.email
+	
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
 
 
 # URL shorthands
