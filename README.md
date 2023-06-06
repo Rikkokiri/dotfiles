@@ -8,6 +8,12 @@ I keep my dotfiles under `~projects/` and that is what some of the scripts assum
 
 - [ ] Adapt for zsh (currently specified for bash)
 - [ ] In script: Create 'User' file under VS Code directory (if it doesn't exist)
+- [ ] Transfer AText configuration
+- [ ] Set up `pyenv`
+
+### Mac settings:
+- [ ] Show Airdrop status in menu bar
+- [ ] Modify what is shown in the dock
 
 ## Installation
 
