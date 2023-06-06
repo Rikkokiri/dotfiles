@@ -1,16 +1,17 @@
-#!/usr/bin/env bash
-
 # Install command-line tools using Homebrew.
 
 # Install homebrew if it is not installed
 which brew 1>&/dev/null
 if [ ! "$?" -eq 0 ] ; then
 	echo "Homebrew not installed. Attempting to install Homebrew"
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	if [ ! "$?" -eq 0 ] ; then
 		echo "Something went wrong. Exiting..." && exit 1
 	fi
 fi
+
+# TODO: Fix this line not working
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Make sure we’re using the latest Homebrew
 brew update
@@ -36,10 +37,10 @@ brew install python
 # ---------------------------------------------
 
 # Visual Studio Code (favorite editor)
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 
 # Sublime Text (second favorite editor)
-brew cask install sublime-text
+brew install --cask sublime-text
 
 # Docker for containerization
 brew install docker
@@ -54,52 +55,63 @@ brew install ssh-copy-id
 # brew install tree
 
 # aText
-brew cask install atext
+brew install --cask atext
 
 # Alfred
-brew cask install alfred
+brew install --cask alfred
 
 # ---------------------------------------------
 # Web tools
 # ---------------------------------------------
 
 # Postman
-brew cask install postman
+brew install --cask postman
 
 # Browsers
-brew cask install google-chrome
-brew cask install firefox
+brew install --cask google-chrome
+brew install --cask firefox
 
 # ---------------------------------------------
 # Other work tools
 # ---------------------------------------------
 
 # Communication tools
-brew cask install slack
-brew cask install skype
+brew install --cask slack
+brew install --cask skype
+brew install --cask zoom
+brew install --cask whatsapp
 
 # Toggl Desktop for time tracking
-brew cask install toggl
+brew install --cask toggl-track
 
 # Draw.io (https://www.draw.io/)
-brew cask install drawio
+brew install --cask drawio
+
+# Notion
+brew install --cask notion
 
 # ---------------------------------------------
 # Entertainment
 # ---------------------------------------------
 
-brew cask install spotify
-brew cask install vlc
+brew install --cask spotify
+brew install --cask vlc
 
 # ---------------------------------------------
 # Misc
 # ---------------------------------------------
 
 # Flux for saving myself from that blue light
-brew cask install flux
+brew install --cask flux
 
 # Spectacle for moving windows around (development discontinued though) 
-brew cask install spectacle
+brew install --cask spectacle
+
+# ---------------------------------------------
+# Tools to install on personal setup
+# ---------------------------------------------
+brew install --cask messenger # Facebook messenger
+brew install --cask transmission
 
 # Remove outdated versions from the cellar
 brew cleanup
